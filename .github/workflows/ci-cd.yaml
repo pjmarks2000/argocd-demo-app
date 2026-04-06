@@ -25,7 +25,7 @@ jobs:
 
       - name: Build & Push Docker Image
         run: |
-          IMAGE=kellyamadin/argocd-demo-app:${{ github.sha }}
+          IMAGE=kellyamadin/argocd-demo-app:${{ github.run_number }}
           docker build -t $IMAGE .
           docker push $IMAGE
           echo "IMAGE_NAME=$IMAGE" >> $GITHUB_ENV
