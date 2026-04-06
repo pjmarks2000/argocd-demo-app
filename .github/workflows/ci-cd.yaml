@@ -27,9 +27,10 @@ jobs:
 
       - name: Build & Push Docker Image
         run: |
-           IMAGE=${{ env.IMAGE_NAME }}:${{ github.run_number }}
-           docker build -t $IMAGE .
-           docker push $IMAGE
+          IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.run_number }}
+          docker build -t $IMAGE .
+          docker push $IMAGE
+          echo "IMAGE_NAME=$IMAGE" >> $GITHUB_ENV
 
       - name: Update Kubernetes Manifest
         run: |
