@@ -41,4 +41,4 @@ jobs:
           git add k8s/deployment.yaml
           git commit -m "Update image to $IMAGE_NAME" || echo "No changes to commit"
           git push
-##
+##@
