@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demo-app
-        image: kellyamadin/argocd-demo-app:22b2821d5a0761f47793daa92b27c83008300a51
+        image: kellyamadin/argocd-demo-app:15
         ports:
         - containerPort: 80
 ---
