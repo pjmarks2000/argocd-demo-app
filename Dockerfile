@@ -7,3 +7,4 @@ FROM debian:stable-slim
 COPY --from=builder /app/server /usr/local/bin/server
 CMD ["server"]
 EXPOSE 80
+##
