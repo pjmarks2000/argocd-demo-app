@@ -5,7 +5,7 @@ on:
     branches:
       - main
 env:
-  IMAGE_NAME: argocd-demo-app
+  IMAGE_NAME: kellyamadin/argocd-demo-app
 
 jobs:
   build:
